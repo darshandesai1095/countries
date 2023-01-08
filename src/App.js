@@ -1,23 +1,28 @@
 import './App.css';
 import React, { useState, useEffect } from 'react';
+import CountryCard from './components/countryCard/CountryCard.js';
 import axios from 'axios';
 
 function App() {
 
   // api call
-  const [countriesData, setCountriesData] = useState(null)
+  const [countriesData, setCountriesData] = useState([])
 
   useEffect(() => {
     const baseURL = `https://restcountries.com/v3.1/all`
       axios.get(baseURL).then((response) => {
         setCountriesData(response.data)
       })
+      console.log(countriesData)
   }, [])
 
-  console.log(countriesData)
 
   return (
     <div className="App">
+      <CountryCard/>
+      {countriesData.map(item => (
+        <p key={item.name.common}>{item.name.common}</p>
+      ))}
       <p>it works...</p>
     </div>
   );
