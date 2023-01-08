@@ -19,11 +19,12 @@ function App() {
 
   return (
     <div className="App">
-      <CountryCard/>
-      {countriesData.map(item => (
-        <p key={item.name.common}>{item.name.common}</p>
+      {countriesData.map((country,i) => (
+        <CountryCard 
+                  key={i}
+                  country={country}
+                  identifier={i}   />
       ))}
-      <p>it works...</p>
     </div>
   );
 }

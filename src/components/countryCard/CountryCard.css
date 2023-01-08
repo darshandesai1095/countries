@@ -1,3 +1,32 @@
 .country-card {
-    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    border-radius: 5px;
+    padding-bottom: 20px;
+    background-color: white;
+    box-shadow: 5px 5px 10px #e9ecef;
+}
+
+.country-card img {
+    border-radius: 5px 5px 0 0;
+}
+
+.description {
+    margin: 0 25px;
+}
+
+.title {
+    font-weight: 700;
+    font-size: 1.2rem;
+    
+}
+
+.country-card p {
+    font-size: 0.9rem;
+    font-weight: 300;
+}
+
+.bold {
+    font-weight: 500;
 }
