@@ -6,6 +6,8 @@
     padding-bottom: 20px;
     background-color: white;
     box-shadow: 5px 5px 10px #e9ecef;
+    margin: 20px;
+    margin-bottom: 70px;
 }
 
 .country-card img {
@@ -18,7 +20,7 @@
 
 .title {
     font-weight: 700;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     
 }
 
