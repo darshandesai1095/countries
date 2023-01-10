@@ -1,0 +1,10 @@
+.home {
+    color: #212529;
+    background-color: #f8f9fa;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 80px
+  }
+  
