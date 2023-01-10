@@ -5,6 +5,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
-    padding: 80px
+    padding: 0 50px;
+    padding-top: 50px
   }
   

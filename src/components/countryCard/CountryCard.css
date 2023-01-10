@@ -1,14 +1,16 @@
 .country-card {
     display: flex;
     flex-direction: column;
-    max-width: 300px;
+    min-width: 200px;
+    max-width: 18vw;
     border-radius: 5px;
     padding-bottom: 20px;
     background-color: white;
     box-shadow: 5px 5px 10px #e9ecef;
-    margin: 20px;
-    margin-bottom: 70px;
+    margin: 10px;
+    margin-bottom: 60px;
     transition: 0.2s;
+    flex-shrink: 1;
 }
 
 .country-card:hover {
