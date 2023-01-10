@@ -21,10 +21,15 @@
 .header__darkmode {
     display: flex;
     flex-direction: row;
+    transition: 0.2;
+}
+
+.header__darkmode:hover {
+    cursor: pointer;
+    opacity: 0.5;
 }
 
 .darkmode-icon {
     align-self: center;
     transform: scale(0.8);
-    
 }

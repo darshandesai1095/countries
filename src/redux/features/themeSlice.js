@@ -1,8 +1,9 @@
 import { createSlice } from '@reduxjs/toolkit'
 
-const initialState = { value: {
-    darkMode: false
-  },
+const initialState = { 
+    value: {
+        darkTheme: false
+    },
 }
 
 export const themeSlice = createSlice({
@@ -10,12 +11,11 @@ export const themeSlice = createSlice({
   initialState,
   reducers: {
     switchTheme: (state, action) => {
-      state.value = !state.value
+      state.value.darkTheme = !state.value.darkTheme
     },
   },
 })
 
-// Action creators are generated for each case reducer function
-export const { switchTheme } = themeSlice.actions
 
+export const { switchTheme } = themeSlice.actions
 export default themeSlice.reducer
