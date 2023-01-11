@@ -14,8 +14,9 @@
 }
 
 .country-card:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
     cursor: pointer;
+    box-shadow: 5px 5px 10px #dee2e6;
 }
 
 .country-card img {
