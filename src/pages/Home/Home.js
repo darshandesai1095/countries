@@ -2,6 +2,7 @@ import './Home.css'
 import React, { useState, useEffect } from 'react';
 import CountryCard from '../../components/CountryCard/CountryCard';
 import SearchBar from '../../components/SearchBar/SearchBar';
+import Dropdown from '../../components/Dropdown/Dropdown';
 import axios from 'axios';
 
 
@@ -22,14 +23,20 @@ function Home() {
 
         <div className='home'>
 
-            <SearchBar/>
+            <div className='home__nav'>
+                <SearchBar/>
+                <Dropdown/>
+            </div>
 
-            {countriesData.map((country,i) => (
-                <CountryCard 
-                        key={i}
-                        country={country}
-                        identifier={i}   />
-            ))}
+
+            <div className='home__grid'>
+                {countriesData.map((country,i) => (
+                    <CountryCard 
+                            key={i}
+                            country={country}
+                            identifier={i}   />
+                ))}
+            </div>
 
         </div>
         
