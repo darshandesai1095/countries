@@ -1,6 +1,6 @@
 import './Home.css'
 import React, { useState, useEffect } from 'react';
-import CountryCard from '../../components/countryCard/CountryCard';
+import CountryCard from '../../components/CountryCard/CountryCard';
 import axios from 'axios';
 
 
