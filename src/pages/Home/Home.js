@@ -1,6 +1,7 @@
 import './Home.css'
 import React, { useState, useEffect } from 'react';
 import CountryCard from '../../components/CountryCard/CountryCard';
+import SearchBar from '../../components/SearchBar/SearchBar';
 import axios from 'axios';
 
 
@@ -20,6 +21,9 @@ function Home() {
     return (
 
         <div className='home'>
+
+            <SearchBar/>
+
             {countriesData.map((country,i) => (
                 <CountryCard 
                         key={i}
