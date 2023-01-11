@@ -1,6 +1,17 @@
 .home {
-    color: #212529;
-    background-color: #f8f9fa;
+  color: #212529;
+  background-color: #f8f9fa;
+}
+
+.home__nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0px 95px;
+  padding-top: 50px;
+}
+
+.home__grid {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
