@@ -10,7 +10,7 @@ function SearchBar() {
     const dispatch = useDispatch()
 
     return (
-        <div className='search-bar'>
+        <form className='search-bar'>
 
             <SearchIcon className='search-icon'/>
 
@@ -21,7 +21,7 @@ function SearchBar() {
                 onChange={(e) => dispatch(setSearch(e.target.value))}
             />
 
-        </div>
+        </form>
     )
 }
 

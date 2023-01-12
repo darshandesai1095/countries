@@ -9,6 +9,8 @@
     width: 30vw;
     transition: 0.2s;
     border: 1px solid white;
+    position: relative;
+    top: -5px;
 }
 
 .search-icon {
@@ -39,5 +41,10 @@
 
 .search-bar:hover {
     border: 1px solid #ced4da;
+}
+
+.search-bar:active,
+.search-bar:focus {
+    border: 1px solid red;
 }
 

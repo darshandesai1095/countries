@@ -40,6 +40,7 @@ button:hover {
     font-size: 0.9rem;
     cursor: pointer;
     width: 160px;
+    transition: 0.2s
 }
 
 .dropdown__options > p:hover {
@@ -51,5 +52,8 @@ button:hover {
 }
 
 .dropdown__spacer {
-    height: 5px
+    height: 5px;
+    position: relative;
+    bottom: -6px;
+
 }
