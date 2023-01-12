@@ -11,6 +11,11 @@ button {
     justify-content: space-between;
     font-size: 0.9rem;
     cursor: pointer;
+    border: 1px solid white;
+}
+
+button:hover {
+    border: 1px solid #ced4da;
 }
 
 .dropdown__bold {
@@ -25,8 +30,7 @@ button {
     background-color: white;
     border-radius: 5px;
     padding: 5px 20px;
-    margin-top: 5px;
-    width: inherit
+    /* border-top: 5px solid rgba(248, 249, 250, 1) */
 }
 
 .dropdown__options > p {
@@ -38,6 +42,14 @@ button {
     width: 160px;
 }
 
+.dropdown__options > p:hover {
+    font-weight: 900;
+}
+
 .dropdown {
-    background-color: red;
+    background-color: rgba(255, 0, 0, 0);
+}
+
+.dropdown__spacer {
+    height: 5px
 }

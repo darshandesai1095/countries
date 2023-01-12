@@ -13,7 +13,7 @@ function Dropdown() {
     return (
         <div
             classname="dropdown" 
-            onClick={() => setDropdownActive(true)}
+            onClick={() => setDropdownActive(dropdownActive => !dropdownActive)}
             onMouseLeave={() => setDropdownActive(false)}
         >
 
@@ -21,6 +21,8 @@ function Dropdown() {
                 <span>Filter by Region</span>
                 <span className='dropdown__bold'>⌄</span>
             </button>
+
+            <div className='dropdown__spacer'></div>
 
            {
                 dropdownActive
