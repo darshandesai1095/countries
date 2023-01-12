@@ -1,5 +1,6 @@
 import React from "react";
 import './CountryCard.css'
+import { useSelector, useDispatch } from 'react-redux'
 
 export default function CountryCard(props) {
 
@@ -7,8 +8,22 @@ export default function CountryCard(props) {
     const region = props.country.region
     const capital = props.country.capital
 
+    const theme = useSelector((state) => state.theme.value)
+
+    const countryCard = {
+        darkMode: {
+            color: 'white',
+            backgroundColor: '#435567',
+            boxShadow: '0px 3px 5px #304346',
+        },
+        lightMode: {
+            color: '#212529',
+            backgroundColor: 'white',
+        }
+    }
+
     return (
-        <div className="country-card">
+        <div className="country-card" style={theme.darkTheme? countryCard.lightMode : countryCard.darkMode}>
 
             <img src={props.country.flags.png}/>
             <div className="description">
