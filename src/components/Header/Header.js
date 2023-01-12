@@ -9,8 +9,8 @@ function Header() {
 
     const header = {
         darkMode: {
-            backgroundColor: '#013a63',
-            boxShadow: '0px 3px 5px #e9ecef',
+            backgroundColor: '#435567',
+            boxShadow: '0px 3px 5px #304352',
             color: 'white'
         },
         lightMode: {
@@ -25,7 +25,7 @@ function Header() {
     const dispatch = useDispatch()
 
     return (
-        <div className='header' style={ theme.darkTheme? header.lightMode : header.darkMode }>
+        <div className='header' style={theme.darkTheme? header.lightMode : header.darkMode}>
             <h1>Where in the world?</h1>
             <div className='header__darkmode' onClick={() => dispatch(switchTheme())}>
                 {
