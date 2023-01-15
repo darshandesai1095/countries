@@ -26,7 +26,7 @@ function SearchBar() {
         <form className={`search-bar ${theme.darkTheme? "search-bar--light" : "search-bar--dark"}`} >
 
             
-            <SearchIcon className={`search-iron ${theme.darkTheme? "search-icon--light" : "search-icon--dark"}`} />
+            <SearchIcon className={`search-icon ${theme.darkTheme? "search-icon--light" : "search-icon--dark"}`} />
 
             <input
                 type="text"
