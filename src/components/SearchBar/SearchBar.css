@@ -39,20 +39,20 @@
     border: 1px solid #435567;
 }
 
-.search-icon--light:hover {
+.search-icon:hover {
     cursor: pointer;
-    border: 1px solid white;
-    background-color: #f8f9fa;
     border-radius: 50%;
     padding: 10px
 }
 
+.search-icon--light:hover {
+    border: 1px solid white;
+    background-color: #f8f9fa;
+}
+
 .search-icon--dark:hover {
-    cursor: pointer;
     border: 1px solid #304346;
     background-color: #304346;
-    border-radius: 50%;
-    padding: 10px
 }
 
 .search-bar--light input {
