@@ -86,9 +86,3 @@
 .search-bar--dark:hover {
     border: 1px solid #304346;
 }
-
-.search-bar:active,
-.search-bar:focus {
-    border: 1px solid red;
-}
-
