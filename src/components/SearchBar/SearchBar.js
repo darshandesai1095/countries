@@ -10,6 +10,10 @@ function SearchBar() {
     const theme = useSelector((state) => state.theme.value)
     const dispatch = useDispatch()
 
+    const handleSearch = (event) => {
+        event.preventDefault()
+    }
+
     const searchBar = {
         light: {
             backgroundColor: 'white',
@@ -20,7 +24,6 @@ function SearchBar() {
             backgroundColor: '#435567',
             boxShadow: '0px 0px 10px #304346',
             border: '1px solid #304346'
-
         }
     }
 
@@ -41,7 +44,6 @@ function SearchBar() {
         light: {
             color: '#343a40'
         },
-
         dark: {
             color: 'white',
             backgroundColor: '#435567'
@@ -49,10 +51,10 @@ function SearchBar() {
     }
 
     return (
-        <form   className={`search-bar ${theme.darkTheme ? "search-bar--light" : "search-bar--dark"}`}
-                style={theme.darkTheme ? searchBar.light : searchBar.dark} >
+        <form   style={theme.darkTheme ? searchBar.light : searchBar.dark} 
+                className={theme.darkTheme ? "search-bar--light" : "search-bar--dark"} >
 
-            
+
             <SearchIcon className={`search-icon ${theme.darkTheme ? "search-icon--light" : "search-icon--dark"}`}
                         style={theme.darkTheme ? searchIcon.light : searchIcon.dark}/>
 
@@ -62,6 +64,7 @@ function SearchBar() {
                 placeholder="Search for a country..."
                 value={search.searchEntry}
                 onChange={(e) => dispatch(setSearch(e.target.value))}
+                onSubmit={(e) => handleSearch(e)}
             />
 
         </form>
