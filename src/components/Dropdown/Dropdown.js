@@ -11,8 +11,7 @@ function Dropdown() {
     const dispatch = useDispatch()
 
     return (
-        <div
-            classname="dropdown" 
+        <div 
             onClick={() => setDropdownActive(dropdownActive => !dropdownActive)}
             onMouseLeave={() => setDropdownActive(false)}
         >

@@ -47,10 +47,6 @@ button:hover {
     font-weight: 900;
 }
 
-.dropdown {
-    background-color: rgba(255, 0, 0, 0);
-}
-
 .dropdown__spacer {
     height: 5px;
     position: relative;
