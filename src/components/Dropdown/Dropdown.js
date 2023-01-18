@@ -60,6 +60,7 @@ function Dropdown() {
                 <div className='dropdown__options' style={theme.darkTheme ? dropdownMenuStyle.light : dropdownMenuStyle.dark}>
                     {regions.map(region => (
                         <p 
+                            key={region}
                             style={theme.darkTheme ? dropdownMenuStyle.light : dropdownMenuStyle.dark}
                             onClick={() => dispatch(setEndpoint(`region/${region}`))} >
                                 {region}
