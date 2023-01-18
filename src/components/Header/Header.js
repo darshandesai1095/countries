@@ -3,6 +3,7 @@ import DarkModeOutlinedIcon from '@mui/icons-material/DarkModeOutlined';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import { useSelector, useDispatch } from 'react-redux'
 import { switchTheme } from '../../redux/features/themeSlice'
+import { setEndpoint } from '../../redux/features/endpointSlice'
 
 
 function Header() {
@@ -19,14 +20,14 @@ function Header() {
         }
     }
 
-
-
     const theme = useSelector((state) => state.theme.value)
     const dispatch = useDispatch()
 
     return (
         <div className='header' style={theme.darkTheme? header.lightMode : header.darkMode}>
-            <h1>Where in the world?</h1>
+            <h1 onClick={() => dispatch(setEndpoint(`all`))}>
+                Where in the world?
+            </h1>
             <div className='header__darkmode' onClick={() => dispatch(switchTheme())}>
                 {
                  theme.darkTheme ?
