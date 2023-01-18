@@ -12,7 +12,6 @@ function Home() {
     // api call
     const [countriesData, setCountriesData] = useState([])
     const endpoint = useSelector((state) => state.endpoint.value.endpoint)
-    console.log(endpoint)
 
     useEffect(() => {
         const baseURL = `https://restcountries.com/v3.1/${endpoint}`
