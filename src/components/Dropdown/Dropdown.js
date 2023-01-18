@@ -7,7 +7,7 @@ import { setEndpoint } from '../../redux/features/endpointSlice'
 function Dropdown() {
 
     const [dropdownActive, setDropdownActive] = useState(false)
-    const regions = ["Africa", "America", "Asia", "Europe", "Oceana"]
+    const regions = ["Africa", "America", "Asia", "Europe", "Oceania"]
     const search = useSelector((state) => state.search.value)
     const theme = useSelector((state) => state.theme.value)
     const dispatch = useDispatch()
