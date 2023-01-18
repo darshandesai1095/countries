@@ -4,9 +4,19 @@ import CountryCard from './components/CountryCard/CountryCard.js';
 import Header from './components/Header/Header.js';
 import Home from './pages/Home/Home.js';
 import axios from 'axios';
+import { useSelector } from 'react-redux'
 
 function App() {
-
+  
+  const theme = useSelector((state) => state.theme.value)
+  const bkgStyle = {
+    darkMode: {
+        backgroundColor: '#324554',
+    },
+    lightMode: {
+        backgroundColor: '#f8f9fa',
+    }
+}
   // // api call
   // const [countriesData, setCountriesData] = useState([])
 
@@ -20,7 +30,8 @@ function App() {
 
 
   return (
-    <div className="App">
+    <div  className="App"
+          style={theme.darkTheme ? bkgStyle.lightMode : bkgStyle.darkMode}>
 
       <Header/>
       <Home/>
