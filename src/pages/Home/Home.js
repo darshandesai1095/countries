@@ -1,6 +1,6 @@
 import './Home.css'
 import React, { useState, useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux'
+import { useSelector } from 'react-redux'
 import CountryCard from '../../components/CountryCard/CountryCard';
 import SearchBar from '../../components/SearchBar/SearchBar';
 import Dropdown from '../../components/Dropdown/Dropdown';
@@ -11,14 +11,15 @@ function Home() {
 
     // api call
     const [countriesData, setCountriesData] = useState([])
+    const endpoint = useSelector((state) => state.endpoint.value.endpoint)
+    console.log(endpoint)
 
     useEffect(() => {
-        const baseURL = `https://restcountries.com/v3.1/all`
+        const baseURL = `https://restcountries.com/v3.1/${endpoint}`
         axios.get(baseURL).then((response) => {
             setCountriesData(response.data)
         })
-        console.log(countriesData)
-    }, [])
+    }, [endpoint])
 
     const theme = useSelector((state) => state.theme.value)
 

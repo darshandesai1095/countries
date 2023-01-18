@@ -10,7 +10,7 @@ export const endpointSlice = createSlice({
   name: 'endpoint',
   initialState,
   reducers: {
-    setEndpoint: (state) => {
+    setEndpoint: (state, action) => {
       state.value.endpoint = action.payload
     },
   },

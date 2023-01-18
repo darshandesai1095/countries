@@ -1,6 +1,7 @@
 import './Dropdown.css'
 import React, { useState } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
+import { setEndpoint } from '../../redux/features/endpointSlice'
 
 
 function Dropdown() {
@@ -57,7 +58,14 @@ function Dropdown() {
                 dropdownActive
                 &&
                 <div className='dropdown__options' style={theme.darkTheme ? dropdownMenuStyle.light : dropdownMenuStyle.dark}>
-                    {regions.map(region => (<p style={theme.darkTheme ? dropdownMenuStyle.light : dropdownMenuStyle.dark}>{region}</p>))}
+                    {regions.map(region => (
+                        <p 
+                            style={theme.darkTheme ? dropdownMenuStyle.light : dropdownMenuStyle.dark}
+                            onClick={() => dispatch(setEndpoint(`region/${region}`))} >
+                                {region}
+                        </p>
+                        ))
+                    }
                 </div>
             }
 
