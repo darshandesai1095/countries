@@ -3,6 +3,7 @@ import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { setSearch } from '../../redux/features/searchSlice'
 import SearchIcon from '@mui/icons-material/Search';
+import { setEndpoint } from '../../redux/features/endpointSlice';
 
 function SearchBar() {
 
@@ -12,6 +13,7 @@ function SearchBar() {
 
     const handleSearch = (event) => {
         event.preventDefault()
+        dispatch(setEndpoint(`name/${search.searchEntry}`))
     }
 
     const searchBar = {
@@ -52,7 +54,8 @@ function SearchBar() {
 
     return (
         <form   style={theme.darkTheme ? searchBar.light : searchBar.dark} 
-                className={theme.darkTheme ? "search-bar--light" : "search-bar--dark"} >
+                className={theme.darkTheme ? "search-bar--light" : "search-bar--dark"}
+                onSubmit={(e) => handleSearch(e)} >
 
 
             <SearchIcon className={`search-icon ${theme.darkTheme ? "search-icon--light" : "search-icon--dark"}`}
@@ -64,7 +67,6 @@ function SearchBar() {
                 placeholder="Search for a country..."
                 value={search.searchEntry}
                 onChange={(e) => dispatch(setSearch(e.target.value))}
-                onSubmit={(e) => handleSearch(e)}
             />
 
         </form>
