@@ -17,6 +17,10 @@ function Home() {
         const baseURL = `https://restcountries.com/v3.1/${endpoint}`
         axios.get(baseURL).then((response) => {
             setCountriesData(response.data)
+        }).catch(error => {
+            if (error.message === "Request failed with status code 404") {
+                console.log("it works")
+            }
         })
     }, [endpoint])
 
