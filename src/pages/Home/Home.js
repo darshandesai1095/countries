@@ -5,25 +5,12 @@ import CountryCard from '../../components/CountryCard/CountryCard';
 import SearchBar from '../../components/SearchBar/SearchBar';
 import Dropdown from '../../components/Dropdown/Dropdown';
 import axios from 'axios';
+import useApi from '../../functions/useApi.js';
 
 
 function Home() {
 
-    // api call
-    const [countriesData, setCountriesData] = useState([])
-    const endpoint = useSelector((state) => state.endpoint.value.endpoint)
-
-    useEffect(() => {
-        const baseURL = `https://restcountries.com/v3.1/${endpoint}`
-        axios.get(baseURL).then((response) => {
-            setCountriesData(response.data)
-        }).catch(error => {
-            if (error.message === "Request failed with status code 404") {
-                console.log("it works")
-            }
-        })
-    }, [endpoint])
-
+    const {countriesData} = useApi()
     const theme = useSelector((state) => state.theme.value)
 
     const home = {
@@ -48,7 +35,7 @@ function Home() {
 
 
             <div className='home__grid'>
-                {countriesData.map((country,i) => (
+                {countriesData?.map((country,i) => (
                     <CountryCard 
                             key={i}
                             country={country}
