@@ -1,8 +1,8 @@
 import './App.css';
 import React, { useState, useEffect } from 'react';
-import CountryCard from './components/CountryCard/CountryCard.js';
 import Header from './components/Header/Header.js';
 import Home from './pages/Home/Home.js';
+import Country from './pages/Country/Country';
 import axios from 'axios';
 import { useSelector } from 'react-redux'
 
@@ -34,7 +34,8 @@ function App() {
           style={theme.darkTheme ? bkgStyle.lightMode : bkgStyle.darkMode}>
 
       <Header/>
-      <Home/>
+      {/* <Home/> */}
+      <Country/>
 
     </div>
   );

@@ -1,16 +1,15 @@
 import './Home.css'
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { useSelector } from 'react-redux'
 import CountryCard from '../../components/CountryCard/CountryCard';
 import SearchBar from '../../components/SearchBar/SearchBar';
 import Dropdown from '../../components/Dropdown/Dropdown';
-import axios from 'axios';
 import useApi from '../../functions/useApi.js';
 
 
 function Home() {
 
-    const {countriesData} = useApi()
+    const {countriesData, error, loading} = useApi()
     const theme = useSelector((state) => state.theme.value)
 
     const home = {
