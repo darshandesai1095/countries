@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
-import BackButton from './components/BackButton.js'
+import BackButton from '../../components/BackButton/BackButton';
+import CountryInfo from '../../components/CountryInfo/CountryInfo';
 
 function Country() {
   
@@ -19,7 +20,7 @@ function Country() {
           style={theme.darkTheme ? bkgStyle.lightMode : bkgStyle.darkMode}>
 
       <BackButton/>
-      <Country/>
+      <CountryInfo/>
 
     </div>
   );
