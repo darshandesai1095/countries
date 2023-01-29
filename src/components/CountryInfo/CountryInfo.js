@@ -5,6 +5,7 @@ import './CountryInfo.css'
 function CountryInfo() {
 
 const country = useApi().countriesData[0]
+console.log(country)
 
   return (
     <div className='country-info'>
@@ -24,7 +25,7 @@ const country = useApi().countriesData[0]
             </div>
 
             <div className='country__secondary-info'>
-                <p>Top Level Donain: {country?.name.official}</p>
+                <p>Top Level Domain: {country?.tld[0]}</p>
                 <p>Currencies: {country?.name.official}</p>
                 <p>Languages: {country?.name.official}</p>
             </div>
