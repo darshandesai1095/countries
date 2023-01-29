@@ -5,7 +5,6 @@ import './CountryInfo.css'
 function CountryInfo() {
 
 const country = useApi().countriesData[0]
-console.log("COUNTRY: ", country)
 
   return (
     <div className='country-info'>
@@ -18,7 +17,7 @@ console.log("COUNTRY: ", country)
 
             <div className='country__primary-info'>
                 <p><span>Native Name:</span> {country?.name.official}</p>
-                <p><span>Population:</span> {country?.name.official}</p>
+                <p><span>Population:</span> {country?.population.toLocaleString("en-US")}</p>
                 <p>Region: {country?.region}</p>
                 <p>Sub Region: {country?.subregion}</p>
                 <p>Capital: {country?.capital}</p>
