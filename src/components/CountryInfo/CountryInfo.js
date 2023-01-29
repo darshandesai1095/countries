@@ -7,6 +7,12 @@ function CountryInfo() {
 const country = useApi().countriesData[0]
 console.log(country)
 
+const languagesObj = country?.languages
+let languages = Object.keys(languagesObj).map(lang => languagesObj[lang]).join(', ')
+// for (const language in country?.languages) {
+//   languages +=`${country?.languages[language]} `
+// }
+
   return (
     <div className='country-info'>
 
@@ -27,7 +33,7 @@ console.log(country)
             <div className='country__secondary-info'>
                 <p>Top Level Domain: {country?.tld[0]}</p>
                 <p>Currencies: {country?.name.official}</p>
-                <p>Languages: {country?.name.official}</p>
+                <p>Languages: {languages}</p>
             </div>
 
 
