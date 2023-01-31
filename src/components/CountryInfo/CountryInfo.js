@@ -9,9 +9,6 @@ console.log(country)
 
 const languagesObj = country?.languages
 let languages = Object.keys(languagesObj).map(lang => languagesObj[lang]).join(', ')
-// for (const language in country?.languages) {
-//   languages +=`${country?.languages[language]} `
-// }
 
   return (
     <div className='country-info'>
