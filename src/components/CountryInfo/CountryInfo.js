@@ -4,11 +4,12 @@ import './CountryInfo.css'
 
 function CountryInfo() {
 
-const country = useApi().countriesData[0]
+const {countriesData, error, loading} = useApi()
+const country = countriesData[0]
 console.log(country)
 
-const languagesObj = country?.languages
-let languages = Object.keys(languagesObj).map(lang => languagesObj[lang]).join(', ')
+// const languagesObj = country?.languages
+// let languages = Object.keys(languagesObj).map(lang => languagesObj[lang]).join(', ')
 
 // const region = Object.keys(country?.currencies)[0]
 
@@ -32,9 +33,8 @@ let languages = Object.keys(languagesObj).map(lang => languagesObj[lang]).join('
             <div className='country__secondary-info'>
                 <p>Top Level Domain: {country?.tld[0]}</p>
                 {/* <p>Currencies: {country?.currencies[region].name}</p> */}
-                <p>Languages: {languages}</p>
+                {/* <p>Languages: {languages}</p> */}
             </div>
-
 
             <button>Border Countries</button>
 
