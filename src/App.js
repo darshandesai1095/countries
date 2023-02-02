@@ -16,16 +16,6 @@ function App() {
         backgroundColor: '#f8f9fa',
     }
 }
-  // // api call
-  // const [countriesData, setCountriesData] = useState([])
-
-  // useEffect(() => {
-  //   const baseURL = `https://restcountries.com/v3.1/all`
-  //     axios.get(baseURL).then((response) => {
-  //       setCountriesData(response.data)
-  //     })
-  //     console.log(countriesData)
-  // }, [])
 
   return (
     <div  className="App"
