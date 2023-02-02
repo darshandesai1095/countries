@@ -18,6 +18,7 @@ function useApi() {
         }).catch(error => {
             // "Request failed with status code 404")
             setError(error.message)
+            console.log("ERROR MESSAGE: ", error.message)
         }).finally(setLoading(false))
     }, [endpoint])
 
