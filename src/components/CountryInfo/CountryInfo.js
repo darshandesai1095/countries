@@ -10,6 +10,8 @@ console.log(country)
 const languagesObj = country?.languages
 let languages = Object.keys(languagesObj).map(lang => languagesObj[lang]).join(', ')
 
+// const region = Object.keys(country?.currencies)[0]
+
   return (
     <div className='country-info'>
 
@@ -29,7 +31,7 @@ let languages = Object.keys(languagesObj).map(lang => languagesObj[lang]).join('
 
             <div className='country__secondary-info'>
                 <p>Top Level Domain: {country?.tld[0]}</p>
-                <p>Currencies: {country?.name.official}</p>
+                {/* <p>Currencies: {country?.currencies[region].name}</p> */}
                 <p>Languages: {languages}</p>
             </div>
 
