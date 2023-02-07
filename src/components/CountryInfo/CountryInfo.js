@@ -23,7 +23,7 @@ const region = Object.keys(country?.currencies)[0]
             <h4>{country?.name.common}</h4>
 
             <div className='country__primary-info'>
-                <p><span>Native Name:</span> {country?.name.official}</p>
+                <p><span>Native Name:</span> {country?.altSpellings[1]}</p>
                 <p><span>Population:</span> {country?.population.toLocaleString("en-US")}</p>
                 <p>Region: {country?.region}</p>
                 <p>Sub Region: {country?.subregion}</p>
