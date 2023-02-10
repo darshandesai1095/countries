@@ -42,7 +42,8 @@ const borderCountries = country?.borders.map(country => {
                 <p>Languages: {languages}</p>
             </div>
 
-            <div><p>Border Countries:</p>{borderCountries}</div> // add hash table: 3 letter country code -> country name
+            <div><p>Border Countries:</p>{borderCountries}</div> 
+            {/* add hash table: 3 letter country code -> country name */}
 
         </div>
 
