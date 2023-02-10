@@ -13,6 +13,12 @@ let languages = Object.keys(languagesObj).map(lang => languagesObj[lang]).join('
 
 const region = Object.keys(country?.currencies)[0]
 
+const borderCountries = country?.borders.map(country => {
+  return (
+    <button key={country}>{country}</button>
+  )
+})
+
   return (
     <div className='country-info'>
 
@@ -36,7 +42,7 @@ const region = Object.keys(country?.currencies)[0]
                 <p>Languages: {languages}</p>
             </div>
 
-            <button>Border Countries</button>
+            <div><p>Border Countries:</p>{borderCountries}</div> // add hash table: 3 letter country code -> country name
 
         </div>
 
