@@ -42,7 +42,7 @@ const borderCountries = country?.borders.map(country => {
                 <p>Languages: {languages}</p>
             </div>
 
-            <div>
+            <div className='country__border'>
               <p>Border Countries:</p>
               {borderCountries}
             </div> 
