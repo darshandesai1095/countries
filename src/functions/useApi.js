@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux'
 import axios from 'axios';
 
@@ -17,6 +17,7 @@ function useApi() {
             setCountriesData(response.data)
         }).catch(error => {
             // "Request failed with status code 404")
+            // Check for other error codes
             setError(error.message)
             console.log("ERROR MESSAGE: ", error.message)
         }).finally(setLoading(false))
