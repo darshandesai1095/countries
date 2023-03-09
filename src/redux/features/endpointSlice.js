@@ -2,7 +2,7 @@ import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = { 
     value: {
-        endpoint: 'name/belgium' //'all'
+        endpoint: 'all'
     },
 }
 
