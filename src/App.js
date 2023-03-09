@@ -4,7 +4,7 @@ import Header from './components/Header/Header.js';
 import Home from './pages/Home/Home.js';
 import Country from './pages/Country/Country';
 import { useSelector } from 'react-redux'
-
+import { Routes, Route } from "react-router-dom"
 
 function App() {
   
@@ -23,8 +23,11 @@ function App() {
           style={theme.darkTheme ? bkgStyle.lightMode : bkgStyle.darkMode}>
 
       <Header/>
-      <Home/>
-      {/* <Country/> */}
+
+      <Routes>
+        <Route path="/"       element={<Home/>}     />
+        <Route path="country" element={<Country/>}  />
+      </Routes>
 
     </div>
   );
