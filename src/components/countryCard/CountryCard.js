@@ -23,7 +23,10 @@ export default function CountryCard(props) {
     }
 
     return (
-        <div className="country-card" style={theme.darkTheme? countryCard.lightMode : countryCard.darkMode}>
+        <div    className="country-card" 
+                style={theme.darkTheme? countryCard.lightMode : countryCard.darkMode}
+                onClick={()=>console.log(`${props.country.name.common} clicked`)}
+        >
 
             <img src={props.country.flags.png}/>
             <div className="description">
