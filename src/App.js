@@ -25,8 +25,9 @@ function App() {
       <Header/>
 
       <Routes>
-        <Route path="/"       element={<Home/>}     />
-        <Route path="country" element={<Country/>}  />
+        <Route exact path="/"  element={<Home/>}/>
+        <Route path="country" element={<Country/>}/>
+        <Route path="blank" element={<h1>hi</h1>}/>
       </Routes>
 
     </div>
