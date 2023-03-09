@@ -4,6 +4,7 @@ import DarkModeIcon from '@mui/icons-material/DarkMode';
 import { useSelector, useDispatch } from 'react-redux'
 import { switchTheme } from '../../redux/features/themeSlice'
 import { setEndpoint } from '../../redux/features/endpointSlice'
+import { Link } from "react-router-dom";
 
 
 function Header() {
@@ -25,9 +26,11 @@ function Header() {
 
     return (
         <div className='header' style={theme.darkTheme? header.lightMode : header.darkMode}>
-            <h1 onClick={() => dispatch(setEndpoint(`all`))}>
-                Where in the world?
-            </h1>
+            <Link to="/" style={{ textDecoration: 'none', color: "inherit" }}>
+                <h1 onClick={() => dispatch(setEndpoint(`all`))}>
+                    Where in the world?
+                </h1>
+            </Link>
             <div className='header__darkmode' onClick={() => dispatch(switchTheme())}>
                 {
                  theme.darkTheme ?
