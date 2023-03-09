@@ -22,8 +22,8 @@ function App() {
           style={theme.darkTheme ? bkgStyle.lightMode : bkgStyle.darkMode}>
 
       <Header/>
-      {/* <Home/> */}
-      <Country/>
+      <Home/>
+      {/* <Country/> */}
 
     </div>
   );
