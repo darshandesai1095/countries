@@ -29,19 +29,19 @@ export default function CountryCard(props) {
     return (
 
         <div    className="country-card" 
-                    style={theme.darkTheme? countryCard.lightMode : countryCard.darkMode}
-                    onClick={()=>dispatch(setEndpoint(`/name/${props.country.name.common}`))}
-            >
-        <Link to="country" style={{ textDecoration: 'none', color: "inherit" }}>
+                style={theme.darkTheme? countryCard.lightMode : countryCard.darkMode}
+                onClick={()=>dispatch(setEndpoint(`/name/${props.country.name.common}`))}
+        >
+            <Link to="country" style={{ textDecoration: 'none', color: "inherit" }}>
 
-                <img src={props.country.flags.png}/>
-                <div className="description">
-                    <h4 className="title">{props.country.name.common}</h4>
-                    <p><span className="bold">Population: </span>{population}</p>
-                    <p><span className="bold">Region: </span>{region}</p>
-                    <p><span className="bold">Capital: </span>{capital}</p>
-                </div>
-        </Link>
+                    <img src={props.country.flags.png}/>
+                    <div className="description">
+                        <h4 className="title">{props.country.name.common}</h4>
+                        <p><span className="bold">Population: </span>{population}</p>
+                        <p><span className="bold">Region: </span>{region}</p>
+                        <p><span className="bold">Capital: </span>{capital}</p>
+                    </div>
+            </Link>
         </div>
     )
 }
