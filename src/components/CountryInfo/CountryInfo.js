@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import useApi from '../../functions/useApi';
 import './CountryInfo.css'
 
@@ -6,12 +6,18 @@ function CountryInfo() {
 
 const {countriesData} = useApi()
 const country = countriesData[0]
-console.log(country)
 
 const languagesObj = country?.languages
-let languages = Object.keys(languagesObj).map(lang => languagesObj[lang]).join(', ')
 
-const region = Object.keys(country?.currencies)[0]
+const [languages, setLanguages] = useState([])
+const [region, setRegion] = useState([])
+
+useEffect(() => {
+  if (languagesObj) {
+    setLanguages(Object.keys(languagesObj).map(lang => languagesObj[lang]).join(', '))
+    setRegion(Object.keys(country?.currencies)[0])
+  }
+}, [countriesData])
 
 const borderCountries = country?.borders.map(country => {
   return (
