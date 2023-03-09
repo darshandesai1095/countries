@@ -10,6 +10,7 @@
     margin-bottom: 60px;
     transition: 0.2s;
     flex-shrink: 1;
+    border: 1px solid red
 }
 
 .country-card:hover {
@@ -20,6 +21,8 @@
 
 .country-card img {
     border-radius: 5px 5px 0 0;
+    width: 100%
+
 }
 
 .description {
