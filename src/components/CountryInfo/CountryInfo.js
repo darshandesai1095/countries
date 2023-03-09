@@ -28,6 +28,7 @@ const borderCountries = country?.borders.map(country => {
   return (
     <div className='country-info'>
 
+
         <img src={country?.flags.png}/>
 
         <div className=''>
@@ -44,7 +45,9 @@ const borderCountries = country?.borders.map(country => {
 
             <div className='country__secondary-info'>
                 <p>Top Level Domain: {country?.tld[0]}</p>
-                <p>Currencies: {country?.currencies[region].name}</p>
+                <p>Currencies: 
+                  {/* {country?.currencies[region].name} */}
+                </p>
                 <p>Languages: {languages}</p>
             </div>
 
