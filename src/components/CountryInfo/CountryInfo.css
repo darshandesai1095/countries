@@ -1,15 +1,49 @@
 .country-info {
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
+    font: inherit;
+}
+
+.country-flag {
+    width: 40vw;
+    height: 100%
+
+}
+
+.country-data {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: -100px
+}
+
+.country-data h4 {
+    font-size: 2rem;
+    margin-top: 20px;
+}
+
+.country-facts {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 .country__border {
     display: flex;
     flex-direction: row;
+    margin-top: 40px;
 }
 
-button {
-    display: inline-block;
-    padding: 10px 25px;
-    border: 1px solid red;
+.country__border button {
+    padding: 5px;
+    width: 100px;
+    height: 50px;
+    background-color: white;
+    padding: 5px 10px;
+
+}
+
+.light {
+    font-weight: 10;
 }
