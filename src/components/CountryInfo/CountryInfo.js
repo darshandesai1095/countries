@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useSelector } from 'react-redux'
 import useApi from '../../functions/useApi';
 import './CountryInfo.css'
 
@@ -21,35 +22,48 @@ useEffect(() => {
 
 const borderCountries = country?.borders.map(country => {
   return (
-    <button key={country}>{country}</button>
+    <button classname="country" key={country}>{country}</button>
   )
 })
 
+const theme = useSelector((state) => state.theme.value)
+const color = {
+  darkMode: {
+      color: 'white'
+  },
+  lightMode: {
+  }
+}
+
   return (
-    <div className='country-info'>
+    <div className='country-info' style={theme.darkTheme? color.lightMode : color.darkMode}>
 
+        <img className="country-flag" src={country?.flags.png}/>
 
-        <img src={country?.flags.png}/>
-
-        <div className=''>
+        <div className='country-data'>
 
             <h4>{country?.name.common}</h4>
 
-            <div className='country__primary-info'>
-                <p><span>Native Name:</span> {country?.altSpellings[1]}</p>
-                <p><span>Population:</span> {country?.population.toLocaleString("en-US")}</p>
-                <p>Region: {country?.region}</p>
-                <p>Sub Region: {country?.subregion}</p>
-                <p>Capital: {country?.capital}</p>
+            <div className="country-facts">
+
+              <div className='country__primary-info'>
+                  <p>Native Name: <span className='light'>{country?.altSpellings[1]}</span></p>
+                  <p>Population: <span className='light'>{country?.population.toLocaleString("en-US")}</span></p>
+                  <p>Region: {country?.region}</p>
+                  <p>Sub Region: {country?.subregion}</p>
+                  <p>Capital: {country?.capital}</p>
+              </div>
+
+              <div className='country__secondary-info'>
+                  <p>Top Level Domain: {country?.tld[0]}</p>
+                  <p>Currencies: 
+                    {/* {country?.currencies[region].name} */}
+                  </p>
+                  <p>Languages: {languages}</p>
+              </div>
+
             </div>
 
-            <div className='country__secondary-info'>
-                <p>Top Level Domain: {country?.tld[0]}</p>
-                <p>Currencies: 
-                  {/* {country?.currencies[region].name} */}
-                </p>
-                <p>Languages: {languages}</p>
-            </div>
 
             <div className='country__border'>
               <p>Border Countries:</p>
