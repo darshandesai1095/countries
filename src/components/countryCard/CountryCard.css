@@ -10,13 +10,12 @@
     margin-bottom: 60px;
     transition: 0.2s;
     flex-shrink: 1;
-    border: 1px solid red
 }
 
 .country-card:hover {
     transform: scale(1.05);
     cursor: pointer;
-    /* box-shadow: 5px 5px 10px #e9ecef; */
+    box-shadow: 5px 5px 10px #e9ecef;
 }
 
 .country-card img {
