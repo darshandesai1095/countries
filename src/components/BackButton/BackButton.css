@@ -1,0 +1,23 @@
+.back-button {
+    border-radius: 5px;
+    padding: 7px 25px;
+    width: 120px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    text-align: center;
+    font-family: inherit;
+    margin: 50px 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.back-button > span {
+    position: relative;
+    top: 3px
+
+}
+
+.back-button:hover {
+    border: 1px solid #ced4da;
+}
