@@ -6,7 +6,7 @@
 }
 
 .country-flag {
-    width: 40vw;
+    width: 45vw;
     height: 100%
 
 }
@@ -49,6 +49,5 @@
 }
 
 .neighbour-country {
-    border: 1px solid red;
-    background: red;
+    background-color: red;
 }
