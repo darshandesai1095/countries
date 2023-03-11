@@ -44,6 +44,11 @@
 
 }
 
-.light {
-    font-weight: 10;
+.light-font {
+    font-weight: lighter
+}
+
+.neighbour-country {
+    border: 1px solid red;
+    background: red;
 }

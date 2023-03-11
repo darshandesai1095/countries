@@ -22,7 +22,7 @@ useEffect(() => {
 
 const borderCountries = country?.borders.map(country => {
   return (
-    <button classname="country" key={country}>{country}</button>
+    <button classname="neighbour-country" key={country}>{country}</button>
   )
 })
 
@@ -47,19 +47,19 @@ const color = {
             <div className="country-facts">
 
               <div className='country__primary-info'>
-                  <p>Native Name: <span className='light'>{country?.altSpellings[1]}</span></p>
-                  <p>Population: <span className='light'>{country?.population.toLocaleString("en-US")}</span></p>
-                  <p>Region: {country?.region}</p>
-                  <p>Sub Region: {country?.subregion}</p>
-                  <p>Capital: {country?.capital}</p>
+                  <p>Native Name: <span className='light-font'>{country?.altSpellings[1]}</span></p>
+                  <p>Population: <span className='light-font'>{country?.population.toLocaleString("en-US")}</span></p>
+                  <p>Region: <span className='light-font'>{country?.region} </span></p>
+                  <p>Sub Region: <span className='light-font'>{country?.subregion}</span></p>
+                  <p>Capital: <span className='light-font'> {country?.capital}</span></p>
               </div>
 
               <div className='country__secondary-info'>
-                  <p>Top Level Domain: {country?.tld[0]}</p>
+                  <p>Top Level Domain: <span className='light-font'>{country?.tld[0]}</span></p>
                   <p>Currencies: 
                     {/* {country?.currencies[region].name} */}
                   </p>
-                  <p>Languages: {languages}</p>
+                  <p>Languages: <span className='light-font'>{languages}</span></p>
               </div>
 
             </div>
