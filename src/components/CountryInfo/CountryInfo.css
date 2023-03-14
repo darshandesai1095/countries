@@ -15,7 +15,6 @@
     display: flex;
     flex-direction: column;
     position: relative;
-    left: -100px
 }
 
 .country-data h4 {
